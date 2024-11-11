@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <nav>
+            <div class="toggle-button">☰ Menu</div>
+            <ul>
+                <li><a href="ndex.html">Home</a></li>
+                <li><a href="pages/login.html">Login</a></li>
+                <li><a href="pages/dashboard.html">Dashboard</a></li>
+                <li><a href="pages/register.html">Register</a></li>
+            </ul>
+        </nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/login.html">Login</a></li>
+            <li><a href="pages/dashboard.html">Dashboard</a></li>
+            <li><a href="pages/register.html">Register</a></li>
+            <!-- Add other links as needed -->
+        </ul>
+    </nav>
+    <script>
+        document.querySelector('.toggle-button').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+    <h1>Welcome to Your LMS</h1>
+    <p>This is the beginning of your Learning Management System!</p>
+    <script src="js/script.js"></script>
+</body>
+</html>

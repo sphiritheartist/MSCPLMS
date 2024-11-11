@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="register-page">
+    <h2>Student Registration</h2>
+    
+    <form id="register-form" method="POST">
+        <h3>Student Information</h3>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="race">Race:</label>
+        <input type="text" id="race" name="race">
+
+        <label for="cell">Cell Number:</label>
+        <input type="tel" id="cell" name="cell" required>
+
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality" required>
+
+        <label for="address">Physical Address:</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="province">Province:</label>
+        <input type="text" id="province" name="province" required>
+
+        <label for="postalCode">Postal Code:</label>
+        <input type="text" id="postalCode" name="postalCode" required>
+
+        <label for="schoolName">School Name:</label>
+        <input type="text" id="schoolName" name="schoolName" required>
+
+        <label for="schoolDistrict">School's District:</label>
+        <input type="text" id="schoolDistrict" name="schoolDistrict">
+
+        <label for="grade">Learner's Grade:</label>
+        <select id="grade" name="grade" required>
+            <option value="R">R</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="1">3</option>
+            <option value="1">4</option>
+            <option value="1">5</option>
+            <option value="1">6</option>
+            <option value="1">7</option>
+            <option value="1">8</option>
+            <option value="1">9</option>
+            <option value="1">10</option>
+            <option value="1">11</option>
+            <option value="1">12</option>
+        </select>
+
+        <h3>Parent/Guardian Information</h3>
+        
+        <label for="parentName">Parent/Guardian Name:</label>
+        <input type="text" id="parentName" name="parentName" required>
+
+        <label for="parentId">Parent/Guardian ID Number:</label>
+        <input type="text" id="parentId" name="parentId" required>
+
+        <label for="parentCell">Parent/Guardian Cell Number:</label>
+        <input type="tel" id="parentCell" name="parentCell" required>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

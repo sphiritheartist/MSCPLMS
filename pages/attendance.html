@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h2>Attendance Register</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Present</th>
+                <th>Absent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td><input type="radio" name="attendance-john" value="present"></td>
+                <td><input type="radio" name="attendance-john" value="absent"></td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td><input type="radio" name="attendance-jane" value="present"></td>
+                <td><input type="radio" name="attendance-jane" value="absent"></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <button type="submit" onclick="submitAttendance()">Submit Attendance</button>
+</body>
+<script src="../js/script.js"></script>
+</html>

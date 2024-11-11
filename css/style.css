@@ -1,0 +1,323 @@
+/* Global Reset: Reset margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles: Setting font, background, and centering content */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 50px; /* Adjust this based on the navbar height */}
+
+/* Header Styling */
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for Links and Paragraphs */
+p, a {
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* General Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Limit form width for larger screens */
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Textarea Specific Styling */
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Buttons */
+button {
+    padding: 15px;
+    background-color: #fbc337;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e0a80d;
+}
+
+/* Responsive Design for Different Devices */
+
+/* Large Screens (Desktops, Tablets Landscape, ≥ 1024px) */
+@media (min-width: 1024px) {
+    body {
+        padding: 50px 20px; /* More padding for large screens */
+    }
+
+    form {
+        padding: 40px;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+    input, select, textarea {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+}
+
+/* Medium Screens (Tablets, Portrait mode: 768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    form {
+        padding: 30px;
+    }
+
+    h1, h2 {
+        font-size: 2rem;
+    }
+
+    input, select, textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small Screens (Mobile devices: ≤ 600px) */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    input, select, textarea {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dashboard Styling */
+.course-list {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-list h3 {
+    color: #333;
+}
+
+.course-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-list li:last-child {
+    border-bottom: none;
+}
+
+/* Attendance Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Form Styling for Registration Page */
+.register-page {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.register-page form {
+    padding: 30px;
+}
+
+/* Dashboard Button Styling */
+.dashboard-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dashboard-button:hover {
+    background-color: #45a049;
+}
+
+/* Additional Page-Specific Styling */
+
+/* Attendance Page Button Styling */
+.attendance-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.attendance-button:hover {
+    background-color: #45a049;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    width: 100%;
+    position: fixed; /* Fix the navbar to the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Stay on top of other elements */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    /* padding: 10px 0; */
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    /* font-weight: bold;
+    padding: 8px 16px; */
+    display: inline-flex; /* Centers link text vertically */
+    align-items: center;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Responsive Navbar for Mobile Devices */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Toggle Button for Small Screens */
+@media (max-width: 600px) {
+    .toggle-button {
+        display: block;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    nav ul {
+        display: none; /* Hide the navbar items initially */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        /* top: 50px; */
+        left: 0;
+        width: 100%;
+    }
+
+    /* Show navbar items when the toggle button is active */
+    .toggle-button.active + ul {
+        display: flex;
+    }
+}
