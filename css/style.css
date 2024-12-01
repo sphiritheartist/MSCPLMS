@@ -1,323 +1,144 @@
-/* Global Reset: Reset margin, padding, and box-sizing */
-* {
+/* Global Styles */
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%; /* Ensure the body takes up the full height of the viewport */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-image: url('path/to/your/background-image.jpg'); /* Set your background image */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Ensure header stays at the top and content below */
+    justify-content: flex-start;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Navbar (Header) */
+header {
+    background-color: rgba(0, 122, 255, 0.9); /* Apple-like blue */
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Ensure header spans the full width */
     box-sizing: border-box;
 }
 
-/* Body Styles: Setting font, background, and centering content */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding-top: 50px; /* Adjust this based on the navbar height */}
-
-/* Header Styling */
-h1, h2, h3 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox to make navigation items horizontal */
+    justify-content: center; /* Center the nav items */
 }
 
-/* Styling for Links and Paragraphs */
-p, a {
+nav li {
+    margin: 0 15px; /* Space between list items */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: text-decoration 0.3s ease; /* Smooth hover effect */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover for better visual feedback */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 60vh; /* Ensure there's enough height for content */
+    flex-grow: 1; /* Allow main content to grow and fill available space */
+}
+
+.content-container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%; /* Make container responsive */
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.intro {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+.button-container {
+    margin-top: 2em;
+}
+
+.cta-btn {
+    background-color: #007aff;
+    color: white;
+    padding: 1em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth button hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(240, 240, 245, 1);
+    padding: 1em;
+    font-size: 0.9em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
     color: #555;
 }
 
-a {
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-/* General Form Styles */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px; /* Limit form width for larger screens */
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Form Input Fields */
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-/* Textarea Specific Styling */
-textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-/* Label Styling */
-label {
-    display: block;
-    font-size: 1rem;
-    margin: 10px 0 5px;
-    color: #333;
-}
-
-/* Buttons */
-button {
-    padding: 15px;
-    background-color: #fbc337;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    width: 100%;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #e0a80d;
-}
-
-/* Responsive Design for Different Devices */
-
-/* Large Screens (Desktops, Tablets Landscape, ≥ 1024px) */
-@media (min-width: 1024px) {
-    body {
-        padding: 50px 20px; /* More padding for large screens */
-    }
-
-    form {
-        padding: 40px;
-    }
-
-    h1, h2 {
-        font-size: 2.5rem;
-    }
-
-    input, select, textarea {
-        font-size: 1.1rem;
-    }
-
-    button {
-        font-size: 1.3rem;
-    }
-}
-
-/* Medium Screens (Tablets, Portrait mode: 768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    form {
-        padding: 30px;
-    }
-
-    h1, h2 {
-        font-size: 2rem;
-    }
-
-    input, select, textarea {
-        font-size: 1rem;
-    }
-
-    button {
-        font-size: 1.2rem;
-    }
-}
-
-/* Small Screens (Mobile devices: ≤ 600px) */
-@media (max-width: 600px) {
-    form {
-        padding: 20px;
-    }
-
-    h1, h2 {
-        font-size: 1.8rem;
-    }
-
-    input, select, textarea {
-        font-size: 1rem;
-    }
-
-    button {
-        font-size: 1.1rem;
-    }
-}
-
-/* Dashboard Styling */
-.course-list {
-    margin-top: 20px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.course-list h3 {
-    color: #333;
-}
-
-.course-list ul {
-    list-style: none;
-    padding: 0;
-}
-
-.course-list li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.course-list li:last-child {
-    border-bottom: none;
-}
-
-/* Attendance Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-/* Form Styling for Registration Page */
-.register-page {
-    width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.register-page h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.register-page form {
-    padding: 30px;
-}
-
-/* Dashboard Button Styling */
-.dashboard-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.dashboard-button:hover {
-    background-color: #45a049;
-}
-
-/* Additional Page-Specific Styling */
-
-/* Attendance Page Button Styling */
-.attendance-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.attendance-button:hover {
-    background-color: #45a049;
-}
-
-/* Navbar Styling */
-nav {
-    background-color: #333;
-    width: 100%;
-    position: fixed; /* Fix the navbar to the top */
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Stay on top of other elements */
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center items vertically */
-    /* padding: 10px 0; */
-    margin: 0;
-}
-
-nav ul li {
-    margin-bottom: 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    /* font-weight: bold;
-    padding: 8px 16px; */
-    display: inline-flex; /* Centers link text vertically */
-    align-items: center;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 4px;
-}
-
-/* Responsive Navbar for Mobile Devices */
+/* Navigation Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack vertically */
-        align-items: center;
-    }
-    nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* Toggle Button for Small Screens */
-@media (max-width: 600px) {
-    .toggle-button {
-        display: block;
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        text-align: center;
+        flex-direction: column; /* Stack the navigation items vertically */
     }
 
-    nav ul {
-        display: none; /* Hide the navbar items initially */
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        /* top: 50px; */
-        left: 0;
-        width: 100%;
+    nav li {
+        margin: 10px 0; /* Adjust margin for vertical layout */
     }
 
-    /* Show navbar items when the toggle button is active */
-    .toggle-button.active + ul {
-        display: flex;
+    .content-container {
+        padding: 1.5em; /* Adjust padding for smaller screens */
+        max-width: 90%; /* Make the content container more flexible */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Adjust font size for smaller screens */
+    }
+
+    .intro {
+        font-size: 1.2em; /* Adjust intro text size */
     }
 }

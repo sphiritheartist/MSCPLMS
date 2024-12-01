@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Register</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h2>Attendance Register</h2>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Student Name</th>
-                <th>Present</th>
-                <th>Absent</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>John Doe</td>
-                <td><input type="radio" name="attendance-john" value="present"></td>
-                <td><input type="radio" name="attendance-john" value="absent"></td>
-            </tr>
-            <tr>
-                <td>Jane Smith</td>
-                <td><input type="radio" name="attendance-jane" value="present"></td>
-                <td><input type="radio" name="attendance-jane" value="absent"></td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </tbody>
-    </table>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="educator_dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <button type="submit" onclick="submitAttendance()">Submit Attendance</button>
+    <main>
+        <h1>Track Student Presence</h1>
+        <form action="attendance_process.php" method="POST">
+            <label for="student">Select Student</label>
+            <select id="student" name="student" required>
+                <!-- Dynamic student options here -->
+                <option value="john_doe">John Doe</option>
+                <option value="jane_smith">Jane Smith</option>
+            </select>
+
+            <label for="status">Attendance Status</label>
+            <select id="status" name="status" required>
+                <option value="present">Present</option>
+                <option value="absent">Absent</option>
+                <option value="late">Late</option>
+            </select>
+
+            <button type="submit" class="cta-btn">Mark Attendance</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LMS Project | Smooth and efficient</p>
+    </footer>
 </body>
-<script src="../js/script.js"></script>
 </html>

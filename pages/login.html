@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>LMS - Login</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <h2>Login to Your LMS</h2>
-    <form action="dashboard.html" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        
-        <button type="submit">Login</button>
-    </form>
-    <a href="../index.html">Back to Home</a>
+<body class="login-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Sign In</h1>
+            <p class="intro">Access your educator or trainer dashboard with your credentials.</p>
+            <form action="login_process.php" method="POST" class="login-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <button type="submit" class="cta-btn">Login</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LMS Project | Crafted with care</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New Student</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="educator_dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Register New Student</h1>
+        <form action="register_student_process.php" method="POST">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <label for="parent_name">Parent Name</label>
+            <input type="text" id="parent_name" name="parent_name" required>
+
+            <label for="contact">Parent Contact</label>
+            <input type="text" id="contact" name="contact" required>
+
+            <button type="submit" class="cta-btn">Register</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 LMS Project | Designed with care</p>
+    </footer>
+</body>
+</html>
